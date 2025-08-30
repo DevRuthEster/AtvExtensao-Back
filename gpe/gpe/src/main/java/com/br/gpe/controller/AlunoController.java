@@ -20,8 +20,8 @@ public class AlunoController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping
-    public ResponseEntity <Aluno> buscarAlunoPorCpf(@RequestParam String cpf){
+    @GetMapping("/{cpf}")
+    public ResponseEntity <Aluno> buscarAlunoPorCpf(@PathVariable String cpf){
         return ResponseEntity.ok(alunoService.buscarAlunoPorCpf(cpf));
     }
 

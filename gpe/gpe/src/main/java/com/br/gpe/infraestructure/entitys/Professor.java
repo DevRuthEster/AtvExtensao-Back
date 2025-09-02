@@ -1,3 +1,8 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
 package com.br.gpe.infraestructure.entitys;
 
 import jakarta.persistence.*;
@@ -8,11 +13,11 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "aluno")
+@Table(name = "professor")
 @Entity
 
 
-public class Aluno {
+public class Professor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +32,7 @@ public class Aluno {
     @Column(name = "rg", unique = true, nullable = false)
     private String rg;
     
-    @Column(name = "dataNascimento", nullable = false)
+    @Column(name = "dataNascimento")
     private LocalDate dataNascimento;
     
     @Column(name = "genero")
@@ -36,14 +41,9 @@ public class Aluno {
     @Column(name = "endereco")
     private String endereco;
     
-    @Column (name = "telefone", nullable = false)
+    @Column (name = "telefone",nullable = false)
     private String telefone;
     
-    @Column(name = "nomeResponsavel", nullable = false)
-    private String nomeResponsavel;
-    
-    @Column (name = "telefoneResponsavel", nullable = false)
-    private String telefoneResponsavel;
     
 
 }
